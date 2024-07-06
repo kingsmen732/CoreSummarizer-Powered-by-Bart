@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-const port =  process.env.PORT;
+const port = 3000;
 
 const summarizeText = require('./summarize.js');
 
@@ -28,6 +28,6 @@ app.post('/summarize', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log('Server running at https://summarize.mithileshdev.co:3000/');
+  console.log('Server running at http://localhost:${port}/');
 });
 
